@@ -153,7 +153,7 @@ app.directive('intervals', function () {
                 });
             });
         },
-        controller: function ($scope, $timeout) {
+        controller: function ($scope) {
             $scope.sortOptions = {
                 axis: 'y',
                 cancel: '.disabled'

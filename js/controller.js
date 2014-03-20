@@ -1,4 +1,4 @@
-var app = angular.module('olumpu', ['ui']);
+var app = angular.module('olumpu', ['ui.sortable']);
 
 app.controller('Main', function ($scope) {
     $scope.intervals = [];
