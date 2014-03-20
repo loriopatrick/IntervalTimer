@@ -2,7 +2,7 @@
     <ul class="intervals" ui-sortable="sortOptions" ng-model="intervals">
         <li ng-repeat="interval in intervals" ng-class="{true:'', false:'disabled'}[interval.progress===0]">
             <div class="progress" style="width: {{ interval.progress * 100 }}%"></div>
-            <a href="#">
+            <a href="javascript:void(0);">
                 <div class="time">{{ interval.time.value }} {{ interval.time.unit }}</div>
                 <div class="note">{{ interval.note }}</div>
                 <span class="icon" ng-show="interval.progress==0" ng-click="removeInterval($index);">&#10006;</span>
