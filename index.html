@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="olumpu">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Interval Timer</title>
+
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/filters.js"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body ng-controller="Main" style="">
+<div class="container">
+    <div timer data-get-interval="nextInterval" data-on-clear="clear"></div>
+    <h3>The Interval Timer</h3>
+    <div intervals="intervals"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div>
+    <ul class="intervals" ui-sortable="sortOptions" ng-model="intervals">
+        <li ng-repeat="interval in intervals" ng-class="{true:'', false:'disabled'}[interval.progress===0]">
+            <div class="progress" style="width: {{ interval.progress * 100 }}%"></div>
+            <a href="#">
+                <div class="time">{{ interval.time.value }} {{ interval.time.unit }}</div>
+                <div class="note">{{ interval.note }}</div>
+                <span class="icon" ng-show="interval.progress==0" ng-click="removeInterval($index);">&#10006;</span>
+                <span class="icon" ng-click="copyInterval($index);"><i class="fa fa-files-o"></i></span>
+            </a>
+        </li>
+    </ul>
+    <div class="interval-input" ng-show="inputOpen" ng-init="inputOpen=false;">
+        <form ng-submit="addInterval();">
+            <input focus-me="focusInput" type="text" ng-model="time" placeholder="30 sec/min/hr" />
+            <input type="text" my-maxlength="50" ng-model="note" placeholder="Note" style="width: 350px;" />
+            <button type="submit">
+                <i class="fa fa-plus fa-4" ng-show="time.length"></i>
+                <i class="fa fa-minus fa-4" ng-hide="time.length"></i>
+            </button>
+        </form>
+    </div>
+    <a href="javascript:void(0);" class="add-interval" ng-click="addInterval();">Add Interval</a>
+</div>
