@@ -286,3 +286,25 @@ app.directive('focusMe', function ($timeout, $parse) {
         }
     };
 });
+
+app.directive('sound', function () {
+    return {
+        scope: {
+            src: '=',
+            play: '='
+        },
+        template: '<source src="{{ src }}" type="audio/wav">',
+        link: function (scope, element) {
+            scope.$watch('src', function (src) {
+                scope.audio = new Audio(scope.src);
+            });
+
+            scope.$watch('play', function (play) {
+                if (play === true) {
+                    scope.audio.play();
+                    scope.play = false;
+                }
+            });
+        }
+    };
+});

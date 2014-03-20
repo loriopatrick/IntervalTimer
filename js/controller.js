@@ -6,7 +6,10 @@ app.controller('Main', function ($scope) {
     var current = 0;
     $scope.nextInterval = function () {
         if (current >= $scope.intervals.length) {
+            $scope.playDone = true;
             return null;
+        } else if (current != 0) {
+            $scope.playTick = true;
         }
 
         return $scope.intervals[current++];
