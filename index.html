@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <title>Interval Timer</title>
 
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-    <script src="js/sortable.js"></script>
+    <script src="lib/jquery-2.1.0.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/sortable.js"></script>
     <script src="js/controller.js"></script>
     <script src="js/directives.js"></script>
     <script src="js/filters.js"></script>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"/>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body ng-controller="Main" style="">
@@ -20,7 +20,6 @@
     <div timer data-get-interval="nextInterval" data-on-clear="clear"></div>
     <h3>The Interval Timer</h3>
     <div intervals="intervals"></div>
-
     <div sound data-src="'sounds/tick.wav'" data-play="playTick"></div>
     <div sound data-src="'sounds/done.wav'" data-play="playDone"></div>
 </div>
