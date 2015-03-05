@@ -1,0 +1,18 @@
+<div class="timer">
+    <div pie-progress class="pie-progress" data-progress="progress"
+         data-pie-style="timerStyle" data-reverse></div>
+    <div class="mask"></div>
+    <div class="message">
+        <a ng-hide="running" href="javascript:void(0);" ng-click="start();">Start</a>
+
+        <div ng-show="running">
+            <div style="clear: both; color: white;">{{ (totalSeconds - delta) | deltaTime }}</div>
+            <a ng-hide="paused" href="javascript:void(0);" ng-click="pause();">Pause</a>
+
+            <div ng-show="paused">
+                <a href="javascript:void(0);" ng-click="resume();">Resume</a>,
+                <a href="javascript:void(0);" ng-click="clear();">Clear</a>
+            </div>
+        </div>
+    </div>
+</div>
